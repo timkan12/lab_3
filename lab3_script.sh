@@ -15,7 +15,7 @@ echo "the search: $search"
 echo "Number of phone number:"
 grep -c '[0-9]\{3\}\-[0-9]\{3\}\-[0-9]\{4\}' regex_practice.txt
 echo "Number of phone number of 303 area code"
-grep  '303' regex_practice.txt
+egrep  '303-[0-9]{3}-[0-9]{4}' regex_practice.txt
 grep "@geocities.com" regex_practice.txt >> email_results.txt
 git add email_results.txt
 git commit -m  "Adding Email look up"
