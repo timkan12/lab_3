@@ -16,7 +16,7 @@ echo "Number of phone number:"
 grep -c '[0-9]\{3\}\-[0-9]\{3\}\-[0-9]\{4\}' regex_practice.txt
 echo "Number of phone number of 303 area code"
 egrep  '303-[0-9]{3}-[0-9]{4}' regex_practice.txt
-grep "@geocities.com" regex_practice.txt >> email_results.txt
+egrep -c '\b[a-zA-Z0-9.-]+.[a-zA-Z0-9.-]+\b' regex_practice.txt >> email_results.txt
 git add email_results.txt
 git commit -m  "Adding Email look up"
 git push origin master
